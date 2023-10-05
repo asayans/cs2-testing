@@ -9,3 +9,4 @@ services:
       - CS2_SERVERNAME=${CS2_SERVERNAME}
       - CS2_RCONPW=${CS2_RCONPW}
       - CS2_PW=${CS2_PW}
+      - STEAMGUARD=${STEAMGUARD}
