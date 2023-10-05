@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  cs2-server:
+    image: joedwards32/cs2
+    environment:
+      - STEAMUSER=${STEAMUSER}
+      - STEAMPASS=${STEAMPASS}
+      - CS2_SERVERNAME=${CS2_SERVERNAME}
+      - CS2_RCONPW=${CS2_RCONPW}
+      - CS2_PW=${CS2_PW}
