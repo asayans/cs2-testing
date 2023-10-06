@@ -16,4 +16,4 @@ services:
       - '27015:27015'
 
 volumes:
-  - cs2-server-data:
+  cs2-server-data:
