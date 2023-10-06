@@ -14,3 +14,6 @@ services:
       - cs2-server-data:/
     ports:
       - '27015:27015'
+
+volumes:
+  - cs2-server-data:
