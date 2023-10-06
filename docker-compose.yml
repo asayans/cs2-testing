@@ -10,3 +10,7 @@ services:
       - CS2_RCONPW=${CS2_RCONPW}
       - CS2_PW=${CS2_PW}
       - STEAMGUARD=${STEAMGUARD}
+    volumes:
+      - cs2-server-data:/
+    ports:
+      - '27015:27015'
