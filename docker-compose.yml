@@ -2,18 +2,24 @@ version: '3'
 
 services:
   cs2-server:
-    image: joedwards32/cs2
-    environment:
-      - STEAMUSER=${STEAMUSER}
-      - STEAMPASS=${STEAMPASS}
-      - CS2_SERVERNAME=${CS2_SERVERNAME}
-      - CS2_RCONPW=${CS2_RCONPW}
-      - CS2_PW=${CS2_PW}
-      - STEAMGUARD=${STEAMGUARD}
-    volumes:
-      - cs2-server-data:/
+    env_file:
+      - .env
+    build:
+      context: .
+      args:
+        - STEAMUSER=${STEAMUSER}
+        - STEAMPASS=${STEAMPASS}
+        - SERVERPATH=${SERVERPATH}
+        - CFGPATH=${CFGPATH}
+        
+      dockerfile: Dockerfile
     ports:
-      - '27015:27015'
-
+      - "27015:27015"
+      - "27016:27016"
+    volumes:
+      - cs2-server-data:/home/steam/server
+      - steamcd_login:/home/steam/Steam
+      
 volumes:
   cs2-server-data:
+  steamcd_login:
