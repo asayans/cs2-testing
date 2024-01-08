@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sed -i '/Game_LowViolence/a\Game    csgo/addons/metamod' "SERVERPATH/game/csgo/gameinfo.gi"
 

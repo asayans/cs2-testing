@@ -12,10 +12,12 @@ services:
         - SERVERPATH=${SERVERPATH}
         - CFGPATH=${CFGPATH}
         
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-debug
     ports:
-      - "27015:27015"
-      - "27016:27016"
+      - "27015:27015/udp"
+      - "27015:27015/tcp"
+      - "27016:27016/udp"
+      - "27016:27016/tcp"
     volumes:
       - cs2-server-data:/home/steam/server
       - steamcd_login:/home/steam/Steam

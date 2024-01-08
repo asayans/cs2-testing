@@ -16,6 +16,6 @@ COPY addons ${SERVERPATH}/game/csgo/addons
 
 RUN /home/steam/steamcmd/steamcmd.sh +force_install_dir ${SERVERPATH} +login ${STEAMUSER} ${STEAMPASS} +app_update 730 validate +quit
 
-CMD ["/home/steam/server/server.sh"]
+# CMD ["/home/steam/server/server.sh"]
 
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
